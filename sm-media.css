@@ -13,9 +13,10 @@
 
   .nav-container {
     align-items: baseline;
-    justify-content: baseline;
+    justify-content: space-between;
     padding: 0 20px;
     position: relative;
+    margin: 10px 0;
   }
 
   .nav-button {
@@ -184,6 +185,7 @@
 
   .nav-container {
     padding: 20px;
+    margin: 0;
   }
 
   .nav-links {
