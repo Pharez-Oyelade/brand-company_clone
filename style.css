@@ -24,8 +24,22 @@
   src: url(./Assets/fonts/BelweBoldBT.ttf);
 }
 
-html {
+/* html {
   box-sizing: border-box;
+} */
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: sans-serif;
+  transition: background-color 0.5s ease;
 }
 
 *,
@@ -35,14 +49,6 @@ html {
   padding: 0;
   /* overflow-x: hidden; */
   box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  overflow-x: hidden;
-  font-family: sans-serif;
-  transition: background-color 0.5s ease;
-  font-family: sans-serif;
 }
 
 a {
@@ -253,7 +259,7 @@ button.clear.pink:hover {
 }
 
 .info-section-wrapper {
-  margin: 100px 45px;
+  margin: 50px auto; /* fix 3 */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -675,6 +681,97 @@ footer {
   gap: 20px;
 }
 
+/* FIXES HERE */
+.nav-container,
+.info-section-wrapper,
+.image-display-grid,
+.footer-content-wrapper,
+.footer-socials {
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+.info-section-wrapper {
+  margin: 50px auto;
+}
+
+.grid-item-wrapper .grid-item-img,
+.grid-item-wrapper {
+  width: 100%;
+}
+
+.grid-item-wrapper .grid-item-about {
+  width: 90%;
+}
+
+.grid-item-wrapper .grid-item-img img {
+  width: 380px;
+}
+
+.trigger-section-wrapper,
+.featured-engagement-element-wrapper {
+  max-width: 100%;
+}
+
+.featured-news-grid {
+  max-width: 100%;
+  margin: 40px 0;
+  padding: 0 15px;
+}
+
+.footer-content-wrapper {
+  padding: 80px 15px;
+}
+
+/* MORE FIXES */
+.image-display-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center the grid items */
+  align-items: baseline;
+  width: 100%; /* Ensure the grid takes full width */
+  margin: 0 auto; /* Center the grid container */
+  position: relative;
+  gap: 20px; /* Add a gap between images if needed */
+}
+
+.grid-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the items within the wrapper */
+  gap: 10px;
+  width: 100%; /* Ensure the item wrapper takes full width */
+  max-width: 380px; /* Optionally set a max width for each item */
+  margin: 0 auto; /* Center the wrapper within the grid */
+}
+
+.grid-item-wrapper .grid-item-img {
+  width: 100%; /* Ensure images take up the full width of the wrapper */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.grid-item-wrapper .grid-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images cover the entire area */
+}
+
+.featured-news-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content within the wrapper */
+  margin: 0 auto; /* Center the wrapper itself */
+  max-width: 100%; /* Ensure the wrapper takes the full available width */
+}
+
+.featured-news-img {
+  width: 100%; /* Ensure the image takes up the full width of the container */
+  max-width: 100%; /* Optional: Set a max width if needed */
+  height: auto; /* Maintain the image aspect ratio */
+  object-fit: cover; /* Ensure the image covers the entire area */
+  margin: 0 auto; /* Center the image within its container */
+}
+
 /* small-screen media query */
 
 @media (max-width: 600px) {
@@ -849,5 +946,56 @@ footer {
 
   .featured-news-pointer {
     display: none;
+  }
+
+  /* MEDIA 600 FIXES HERE */
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-container {
+    padding: 20px;
+  }
+
+  .nav-links {
+    right: 0;
+    width: 100%;
+    padding: 80px 15px;
+  }
+
+  .info-section-wrapper {
+    margin: 50px 15px;
+  }
+
+  .info-section-wrapper .info-wrapper {
+    width: 100%;
+  }
+
+  .info-section-wrapper .info-logo {
+    width: 70%;
+  }
+
+  .image-display-grid {
+    padding: 0 15px;
+  }
+
+  .grid-item-wrapper {
+    padding: 20px;
+  }
+
+  .trigger-section {
+    margin: 50px 15px;
+  }
+
+  .trigger-section-wrapper {
+    flex-direction: column;
+  }
+
+  .trigger-section-wrapper .trigger-section-content {
+    width: 100%;
+  }
+
+  .featured-news-grid {
+    padding: 0 15px;
   }
 }
