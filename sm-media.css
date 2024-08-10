@@ -126,7 +126,8 @@
   }
 
   .featured-news-grid .featured-news-img img {
-    width: 65%;
+    max-width: 100%;
+    width: 60%;
   }
 
   .featured-news-grid:hover img {
